@@ -1,7 +1,8 @@
 /* ----------- Variabler ----------- */
 :root {
-  --bluebutton: #63b4d1;
-  --icon-color: #e7dfc6;
+  --darkgreen: #156064;
+  --lightgreen: #55eabd;
+  --brownish: #dfbe99;
   --yellowstar: #dca100;
   --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -12,11 +13,16 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
-
+/* ----------- Global ----------- */
 body {
+  max-width: 1200px;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 .bg-image {
@@ -28,6 +34,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bg-image__opacity {
@@ -39,6 +47,8 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header {
@@ -57,7 +67,7 @@ header {
   align-items: center;
 }
 
-.menu-toggle {
+.btn-style {
   all: unset;
 }
 
@@ -69,4 +79,92 @@ header {
   color: white;
   font-size: 3.5em;
   margin: 0.5em;
+}
+
+.hero__title {
+  color: var(--lightgreen);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+/* ----------- Homepage ----------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  height: 85%;
+  margin: auto;
+  position: relative;
+}
+.hero__text1 {
+  color: white;
+  margin-top: -1em;
+  text-decoration: underline;
+
+  font-weight: bold;
+}
+
+.hero__text2 {
+  color: white;
+  margin-top: 4em;
+  font-weight: normal;
+  max-width: 400px;
+}
+
+.hero__text2--green {
+  color: var(--lightgreen);
+}
+
+.hero__button {
+  background-color: none;
+  color: white;
+  border: 1px solid var(--lightgreen);
+  border-radius: 5px;
+  font-size: fit-content;
+  font-weight: bold;
+  width: 100%;
+  height: 2em;
+  max-width: 300px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.hero__review {
+  display: flex;
+  max-width: 300px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hero__review-text {
+  color: white;
+  font-size: 0.7em;
+  font-weight: thin;
+}
+
+.hero__review-stars {
+  margin-top: -0.2em;
+}
+
+.hero__review-star {
+  color: var(--yellowstar);
+  font-size: 0.7em;
+}
+
+.hero__read-more {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.hero__read-more-text {
+  color: white;
+  font-size: 1.2em;
+}
+
+.hero__read-more-arrow {
+  font-size: 1.5em;
 }
