@@ -15,19 +15,22 @@
 }
 /* ----------- Global ----------- */
 body {
-  max-width: 1200px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .bg-image {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url("images/08-night.jpg");
   background-size: cover;
@@ -55,6 +58,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -91,9 +96,11 @@ header {
 .hero {
   display: flex;
   flex-direction: column;
-  max-width: 80%;
-  height: 85%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh;
+  padding-left: 2rem;
+  margin-bottom: 8rem;
   position: relative;
 }
 .hero__text1 {
@@ -167,4 +174,134 @@ header {
 
 .hero__read-more-arrow {
   font-size: 1.5em;
+}
+.info-section__title {
+  font-size: 2em;
+  margin: 2rem;
+}
+.info-section__highlight-green {
+  color: var(--darkgreen);
+}
+.info-section__highlight-brownish {
+  color: var(--brownish);
+}
+.info-section__line-brownish {
+  background-color: var(--brownish);
+  height: 0.3em;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--cardshadow);
+}
+.info-section__line-green {
+  background-color: var(--darkgreen);
+  height: 0.3em;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--cardshadow);
+}
+.info-section__text {
+  margin: 1rem 2rem;
+}
+.info-section__img {
+  max-width: 100%;
+  margin-bottom: 5rem;
+  border-radius: 5px;
+  box-shadow: var(--cardshadow);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  flex-direction: column;
+}
+.btn-style-border {
+  border: 1px solid var(--darkgreen);
+}
+.btn-style-solid {
+  background-color: var(--darkgreen);
+  color: white;
+}
+.buttons__button {
+  border-radius: 5px;
+  box-shadow: var(--cardshadow);
+  margin-top: 1rem;
+  width: 300px;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ----------- Footer ----------- */
+.footer {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.footer__logo {
+  width: 200px;
+  margin: 2em auto;
+}
+.footer-logo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer__contact {
+  color: white;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: 2rem;
+}
+
+@media (min-width: 800px) {
+  .hero__title {
+    font-size: 5em;
+  }
+  .hero__text1 {
+    font-size: 1.3em;
+  }
+
+  .hero__text2 {
+    font-size: 1.5em;
+  }
+  .hero__button {
+    font-size: 1.4rem;
+    height: 2em;
+    max-width: 400px;
+  }
+  .hero__review {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero__review-text {
+    color: white;
+    font-size: 0.9em;
+    font-weight: thin;
+  }
+
+  .hero__review-stars {
+    margin-top: 0;
+  }
+
+  .hero__review-star {
+    color: var(--yellowstar);
+    font-size: 0.9em;
+  }
+  .info-section__title {
+    font-size: 2.5em;
+  }
+
+  .info-section__text {
+    font-size: 1.3em;
+  }
 }
