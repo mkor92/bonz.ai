@@ -5,6 +5,7 @@
   --brownish: #dfbe99;
   --yellowstar: #dca100;
   --cardshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --buttonshadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 * {
@@ -212,7 +213,6 @@ header {
 .buttons {
   display: flex;
   align-items: center;
-  margin-top: -2rem;
   margin-bottom: 3rem;
   flex-direction: column;
 }
@@ -225,12 +225,51 @@ header {
 }
 .buttons__button {
   border-radius: 5px;
-  box-shadow: var(--cardshadow);
+  box-shadow: var(--buttonshadow);
   margin-top: 1rem;
-  width: 300px;
+  width: 80vw;
+  max-width: 600px;
   height: 3rem;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* ----------- About ----------- */
+.main-about {
+  max-width: 1200px;
+  width: 80vw;
+}
+
+.about {
+  margin-top: 2rem;
+}
+
+.hero__text2-about {
+  margin-top: 5rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.about__title {
+  color: var(--darkgreen);
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+.about__text {
+  margin-bottom: 2rem;
+}
+
+.facility-intro__green {
+  color: var(--darkgreen);
+}
+
+.facility {
+  margin: 2rem 0;
+}
+
+.facility__title {
+  color: var(--darkgreen);
 }
 
 /* ----------- Footer ----------- */
