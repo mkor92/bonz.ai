@@ -27,6 +27,8 @@ main {
 a {
   text-decoration: none;
   color: white;
+  width: 100%;
+  max-width: 600px;
 }
 
 .bg-image {
@@ -72,9 +74,47 @@ header {
   display: flex;
   align-items: center;
 }
-
-.btn-style {
+.header__menu-toggle {
   all: unset;
+}
+.btn-style-border--darkgreen {
+  all: unset;
+  text-align: center;
+  color: black;
+  border: 1px solid var(--darkgreen);
+}
+.btn-style-solid {
+  all: unset;
+  text-align: center;
+  background-color: var(--darkgreen);
+  color: white;
+}
+.btn-style-border--lightgreen {
+  all: unset;
+  text-align: center;
+  color: white;
+  border: 1px solid var(--lightgreen);
+}
+.buttons__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  box-shadow: var(--buttonshadow);
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 3rem;
+  box-sizing: border-box;
+}
+.buttons__button-text {
+  flex: 1;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .search-icon {
@@ -101,6 +141,7 @@ header {
   margin: 0 auto;
   height: 80vh;
   padding-left: 2rem;
+  margin-right: 2rem;
   margin-bottom: 8rem;
   position: relative;
 }
@@ -121,20 +162,6 @@ header {
 
 .hero__text2--green {
   color: var(--lightgreen);
-}
-
-.hero__button {
-  background-color: none;
-  color: white;
-  border: 1px solid var(--lightgreen);
-  border-radius: 5px;
-  font-size: fit-content;
-  font-weight: bold;
-  width: 100%;
-  height: 2em;
-  max-width: 300px;
-  text-align: center;
-  margin-top: 2em;
 }
 
 .hero__review {
@@ -211,27 +238,13 @@ header {
 }
 
 .buttons {
+  max-width: 80vw;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+
+  margin: 0 auto;
   flex-direction: column;
-}
-.btn-style-border {
-  border: 1px solid var(--darkgreen);
-}
-.btn-style-solid {
-  background-color: var(--darkgreen);
-  color: white;
-}
-.buttons__button {
-  border-radius: 5px;
-  box-shadow: var(--buttonshadow);
-  margin-top: 1rem;
-  width: 80vw;
-  max-width: 600px;
-  height: 3rem;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 /* ----------- About ----------- */
@@ -272,8 +285,52 @@ header {
   color: var(--darkgreen);
 }
 
+.facility-intro {
+  margin: 2rem 0;
+}
+/* ----------- Booking ----------- */
+.booking-icon {
+  margin-left: auto; /* Keeps the icon at the right end */
+  font-size: 1.3rem; /* Adjust the icon size */
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+
+  margin: 0 auto;
+}
+.search-result__room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--cardshadow);
+  margin: 5rem 0;
+  border-radius: 5px;
+}
+
+.person-icon {
+  color: black;
+  font-size: 1.3rem;
+}
+.search-result__room-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+.search-result__room-text {
+  margin: 1rem;
+}
+
+.search-result__room-image {
+  max-width: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: var(--cardshadow);
+}
 /* ----------- Footer ----------- */
 .footer {
+  margin-top: 3rem;
   background-color: black;
   opacity: 0.8;
 }
@@ -298,6 +355,7 @@ header {
   align-items: start;
   padding: 2rem;
 }
+/* ----------- Media Queries ----------- */
 
 @media (min-width: 800px) {
   .hero__title {
@@ -310,11 +368,7 @@ header {
   .hero__text2 {
     font-size: 1.5em;
   }
-  .hero__button {
-    font-size: 1.4rem;
-    height: 2em;
-    max-width: 400px;
-  }
+
   .hero__review {
     display: flex;
     max-width: 400px;
@@ -342,5 +396,31 @@ header {
 
   .info-section__text {
     font-size: 1.3em;
+  }
+
+  .search-result__rooms {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Två kolumner, lika stora */
+    gap: 2rem; /* Mellanrum mellan korten */
+    justify-items: center; /* Centrerar korten i varje cell */
+    align-items: start; /* Ser till att korten justeras uppifrån */
+  }
+}
+
+@media (min-width: 1000px) {
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Två kolumner, lika stora */
+    gap: 2rem; /* Mellanrum mellan korten */
+    justify-items: center; /* Centrerar korten i varje cell */
+    align-items: start; /* Ser till att korten justeras uppifrån */
+  }
+
+  .facility-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Två kolumner, lika stora */
+    gap: 2rem; /* Mellanrum mellan korten */
+    justify-items: center; /* Centrerar korten i varje cell */
+    align-items: start; /* Ser till att korten justeras uppifrån */
   }
 }
