@@ -8,13 +8,13 @@
   --buttonshadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
+/* ----------- Global ----------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
 }
-/* ----------- Global ----------- */
 body {
   min-height: 100vh;
   margin: 0 auto;
@@ -75,6 +75,22 @@ header {
   display: flex;
   align-items: center;
 }
+
+.search-icon-text {
+  display: none;
+  position: absolute;
+  font-size: 1rem;
+  color: white;
+  top: 80%;
+  right: 60%;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.search-icon-text.active {
+  display: block;
+}
 .header__menu-toggle {
   all: unset;
 }
@@ -118,14 +134,15 @@ header {
   word-wrap: break-word;
 }
 
-.search-icon {
-  font-size: 2em !important;
-}
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
   color: white;
   font-size: 3.5em;
   margin: 0.5em;
+}
+
+.search-icon.active {
+  color: var(--lightgreen);
 }
 
 .hero__title {
@@ -367,8 +384,8 @@ header {
 }
 /* ----------- Booking ----------- */
 .booking-icon {
-  margin-left: auto; /* Keeps the icon at the right end */
-  font-size: 1.3rem; /* Adjust the icon size */
+  margin-left: auto;
+  font-size: 1.3rem;
 }
 
 .search-result {
@@ -477,28 +494,28 @@ header {
 
   .search-result__rooms {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Två kolumner, lika stora */
-    gap: 2rem; /* Mellanrum mellan korten */
-    justify-items: center; /* Centrerar korten i varje cell */
-    align-items: start; /* Ser till att korten justeras uppifrån */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
   }
 }
 
 @media (min-width: 1000px) {
   .about-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Två kolumner, lika stora */
-    gap: 2rem; /* Mellanrum mellan korten */
-    justify-items: center; /* Centrerar korten i varje cell */
-    align-items: start; /* Ser till att korten justeras uppifrån */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
   }
 
   .facility-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Två kolumner, lika stora */
-    gap: 2rem; /* Mellanrum mellan korten */
-    justify-items: center; /* Centrerar korten i varje cell */
-    align-items: start; /* Ser till att korten justeras uppifrån */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
   }
 }
 

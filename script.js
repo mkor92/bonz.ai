@@ -11,3 +11,9 @@ hamMenu.addEventListener("click", () => {
   toggleHamMenuLine2.classList.toggle("active");
   toggleHamMenuLine3.classList.toggle("active");
 });
+
+const searchIcon = document.querySelector(".search-icon");
+searchIcon.addEventListener("click", () => {
+  document.querySelector(".search-icon").classList.toggle("active");
+  document.querySelector(".search-icon-text").classList.toggle("active");
+});
