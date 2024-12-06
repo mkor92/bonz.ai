@@ -15,6 +15,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
     <title>bonz.ai</title>
   </head>
   <body>
@@ -39,9 +40,25 @@
         <span class="header__menu-search-icon material-symbols-outlined">
           search
         </span>
-        <button class="header__menu-toggle" aria-label="Open menu">
-          <span class="material-symbols-outlined"> menu </span>
-        </button>
+        <aside class="header__menu-links">
+          <ul class="header__menu-links-list">
+            <li class="header__menu-link">
+              <a class="header__menu-link--color" href="/">Hem</a>
+            </li>
+            <li class="header__menu-link">
+              <a class="header__menu-link--color" href="booking.html">Boka</a>
+            </li>
+            <li class="header__menu-link">
+              <a class="header__menu-link--color" href="about.html">Om oss</a>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="header__ham-menu">
+          <span class="header__ham-menu-line line1"></span>
+          <span class="header__ham-menu-line line2"></span>
+          <span class="header__ham-menu-line line3"></span>
+        </div>
       </nav>
     </header>
 
@@ -191,5 +208,6 @@
         />
       </aside>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
