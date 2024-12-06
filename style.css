@@ -141,6 +141,10 @@ header {
   margin: 0.5em;
 }
 
+.search-icon {
+  cursor: pointer;
+}
+
 .search-icon.active {
   color: var(--lightgreen);
 }
@@ -194,6 +198,7 @@ header {
   width: 50px;
   margin-right: 2rem;
   position: relative;
+  cursor: pointer;
 }
 .header__ham-menu-line {
   height: 6px;
